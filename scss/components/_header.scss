@@ -1,0 +1,30 @@
+.header {
+  padding-top: 50px;
+  &_container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 1.5px solid black;
+  }
+  &_logo {
+    font-size: 40px;
+    font-weight: 400;
+  }
+  &_menu--list {
+    display: flex;
+    gap: 40px;
+    font-size: 18px;
+    li{
+      cursor: pointer
+    }
+  }
+  &_greeting--text{
+   font-size: 18px;
+   &--username{
+    font-weight: 600;
+   }
+  }
+}

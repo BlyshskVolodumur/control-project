@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header_container">
+        <div class="header_logo">LOGO</div>
+        <div class="header_menu">
+          <ul class="header_menu--list">
+            <li class="header_menu--list--item">
+              Інтерактив
+              <select id="header_menu--list--navigation">
+                <option value=""></option>
+                <option value="numeric">Числовий</option>
+                <option value="playful">Ігровий</option>
+                <option value="introductory">Ознайомчий</option>
+              </select>
+            </li>
+            <li class="header_menu--list--item">Наша Команда</li>
+            <li class="header_menu--list--item">Контакти</li>
+            <!-- Needs a switch box -->
+            <li class="header_menu--list--item"></li>
+          </ul>
+        </div>
+        <div class="header_greeting">
+          <p class="header_greeting--text">
+            Вітаємо,
+            <span class="header_greeting--text--username" id="header"
+              >Oleksii</span
+            >
+            !
+          </p>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main_container">
+        <!-- 1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1 -->
+        <section class="main_first--section">
+          <h3 class="main_first--section--header">
+            1- Чи високосний рік вашого народження?
+          </h3>
+          <input
+            type="number"
+            placeholder="Введіть рік народження"
+            class="main_first--section--input"
+            id="first_input"
+          />
+          <p class="main_first--section--text--1" id="answer_txt"></p>
+        </section>
+        <!-- 2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2/2 -->
+        <section class="main_second--section">
+          <h3 class="main_second--section--header">
+            2- Вгадай яке число загадав комп'ютер!
+          </h3>
+          <input
+            type="number"
+            placeholder="Введіть ваш здогад"
+            class="main_second--section--input"
+            id="second-guess"
+          />
+          <p class="main_second--section--result" id="second-result"></p>
+        </section>
+        <!-- 3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3/3 -->
+        <section class="main_third--section">
+          <h3 class="main_third--section--header">3- Камінь Ножиці Папір</h3>
+          <div class="main_third--section--top">
+            <ul class="main_third--section--top--list">
+              <li
+                data-choice="Камінь"
+                class="main_third--section--top--list--choice"
+              >
+                Камінь
+              </li>
+              <li
+                data-choice="Ножиці"
+                class="main_third--section--top--list--choice"
+              >
+                Ножиці
+              </li>
+              <li
+                data-choice="Папір"
+                class="main_third--section--top--list--choice"
+              >
+                Папір
+              </li>
+              <li
+                data-choice="Колодязь"
+                class="main_third--section--top--list--choice"
+              >
+                Колодязь
+              </li>
+              <li class="main_third--section--top--list--choice">
+                <ul class="main_third--section--top--list--choice--score">
+                  <li>Рахунок:</li>
+                  <li>Комп'ютер: <span>0</span></li>
+                  <li>Ви: <span>0</span></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="main_third--section--bottom">
+            <div class="main_third--section--bottom--compchoice">
+              <span id="compchoice">Computer</span>
+            </div>
+            <p class="main_third--section--bottom--text"></p>
+          </div>
+        </section>
+
+        <!-- 4/4/4/4/4/4/4/4/4/4/4/4/4/4/4/4/4/4/4/4/4/4/4/4/4/4/4/4/4/4/4/4/4/4/4 -->
+        <section class="main_fourth--section">
+          <h2 class="main_second--section--header">4- Калькулятор</h2>
+          <div class="main_fourth--section--content">
+            <input id="numA" type="number" placeholder="Введіть число" />
+            <div class="main_fourth--section--buttons">
+              <button data-op="*" id="fourth--button">*</button>
+              <button data-op="+" id="fourth--button">+</button>
+              <button data-op="-" id="fourth--button">-</button>
+              <button data-op="/" id="fourth--button">/</button>
+            </div>
+            <input id="numB" type="number" placeholder="Введіть число" />
+            <button id="equal">=</button>
+            <span id="main_fourth--result"></span>
+          </div>
+        </section>
+        <!-- 5/55/5/5/5/5/5/5/5/5/5/5/5/5/5/5/5/5/5/5/5/5/5/5/5/5/5/5/5/5/5/5/5/5/5/5/5/5/5/5 -->
+        <section class="main_fifth--section">
+          <h2 class="main_fifth--section--header">5- Калькулятор часу</h2>
+          <div class="main_fifth--section--content">
+            <input type="number" id="time-input" placeholder="Введіть число" />
+            <div class="main_fifth--section--content--answer">
+              <span id="time-result"></span>
+            </div>
+          </div>
+        </section>
+        <section class="main_eight--section">
+          <h2 class="main_fifth--section--header">8- Введіть три числа</h2>
+          <div class="main_eight--section--content">
+            <input type="number" id="num1" />
+            <input type="number" id="num2" />
+            <input type="number" id="num3" />
+          </div>
+          <span id="main_eight--result"></span>
+        </section>
+        <section>
+          <h2 class="main_fifth--section--header">Наша команда</h2>
+          <div class="slider">
+            <div class="arrow" id="prev">⬅</div>
+            <div class="slides" id="slides">
+              <div class="slide">
+                <img
+                  src="images/photo1.jpg"
+                  alt="Фото"
+                />
+              </div>
+
+              <div class="slide">
+                <img
+                  src="./images/photo2.jpg"
+                  alt="Фото"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./images/photo3.jpg"
+                  alt="Фото"
+                />
+              </div>
+            </div>
+            <div class="arrow" id="next">➡</div>
+          </div>
+        </section>
+        <section class="main_seventh--section">
+                <h2 class="main_fifth--section--header">7- Футбол</h2>
+                <div id="main_seventh--field">
+                  <div id="ball"></div>
+                  <div id="goal"></div>
+                </div>
+                <p id="score">Score: 0</p>
+        </section>
+        <section class="main_tenth--section">
+          <h2 class="main_tenth--section--header">10- Обери вченого/их</h2>
+          <div class="main_tenth--section--bottom">
+            <div class="main_tenth--section--bottom--left">
+              <ul class="main_tenth--section--bottom--left--list">
+                <li
+                  class="main_tenth--section--bottom--left--list--el"
+                  id="tenth--el"
+                >
+                  Вчений
+                </li>
+                <li
+                  class="main_tenth--section--bottom--left--list--el"
+                  id="tenth--el"
+                >
+                  Вчений
+                </li>
+                <li
+                  class="main_tenth--section--bottom--left--list--el"
+                  id="tenth--el"
+                >
+                  Вчений
+                </li>
+                <li
+                  class="main_tenth--section--bottom--left--list--el"
+                  id="tenth--el"
+                >
+                  Вчений
+                </li>
+                <li
+                  class="main_tenth--section--bottom--left--list--el"
+                  id="tenth--el"
+                >
+                  Вчений
+                </li>
+                <li
+                  class="main_tenth--section--bottom--left--list--el"
+                  id="tenth--el"
+                >
+                  Вчений
+                </li>
+                <li
+                  class="main_tenth--section--bottom--left--list--el"
+                  id="tenth--el"
+                >
+                  Вчений
+                </li>
+                <li
+                  class="main_tenth--section--bottom--left--list--el"
+                  id="tenth--el"
+                >
+                  Вчений
+                </li>
+                <li
+                  class="main_tenth--section--bottom--left--list--el"
+                  id="tenth--el"
+                >
+                  Вчений
+                </li>
+                <li
+                  class="main_tenth--section--bottom--left--list--el"
+                  id="tenth--el"
+                >
+                  Вчений
+                </li>
+                <li
+                  class="main_tenth--section--bottom--left--list--el"
+                  id="tenth--el"
+                >
+                  Вчений
+                </li>
+                <li
+                  class="main_tenth--section--bottom--left--list--el"
+                  id="tenth--el"
+                >
+                  Вчений
+                </li>
+              </ul>
+            </div>
+            <div class="main_tenth--section--bottom--right">
+              <ul class="main_tenth--section--bottom--right--list">
+                <li class="main_tenth--section--botttom--right--list--el">
+                  <button
+                    class="main_tenth--section--bottom--right--list--el--button"
+                  >
+                    Які вчені народилися в 19 ст
+                  </button>
+                </li>
+                <li class="main_tenth--section--botttom--right--list--el">
+                  <button
+                    class="main_tenth--section--bottom--right--list--el--button"
+                  >
+                    Відсортувати вчених по алфавіту
+                  </button>
+                </li>
+
+                <li class="main_tenth--section--botttom--right--list--el">
+                  <button
+                    class="main_tenth--section--bottom--right--list--el--button"
+                  >
+                    Відсортувати вчених по кількості прожитих років
+                  </button>
+                </li>
+                <li class="main_tenth--section--botttom--right--list--el">
+                  <button
+                    class="main_tenth--section--bottom--right--list--el--button"
+                  >
+                    Знайти вченого який народився найпізніше
+                  </button>
+                </li>
+                <li class="main_tenth--section--botttom--right--list--el">
+                  <button
+                    class="main_tenth--section--bottom--right--list--el--button"
+                  >
+                    Знайти рік народження Albert Einstein
+                  </button>
+                </li>
+                <li class="main_tenth--section--botttom--right--list--el">
+                  <button
+                    class="main_tenth--section--bottom--right--list--el--button"
+                  >
+                    Знайти вчених чиє прізвище починажється на C
+                  </button>
+                </li>
+                <li class="main_tenth--section--botttom--right--list--el">
+                  <button
+                    class="main_tenth--section--bottom--right--list--el--button"
+                  >
+                    Видалити вчених ім'я яких починається на A
+                  </button>
+                </li>
+                <li class="main_tenth--section--botttom--right--list--el">
+                  <button
+                    class="main_tenth--section--bottom--right--list--el--button"
+                  >
+                    Знайти вчених які прожили найбільше і найменше
+                  </button>
+                </li>
+                <li class="main_tenth--section--botttom--right--list--el">
+                  <button
+                    class="main_tenth--section--bottom--right--list--el--button"
+                  >
+                    Знайди вчених чйї літери ім'я і прізвища співпадають
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer_container">
+        <div class="footer_logo">LOGO</div>
+        <div class="footer_contacts">
+          <ul class="footer_contacts--list">
+            <li class="footer_contacts--list--el">Тел: +38(123)4567890</li>
+            <li class="footer_contacts--list--el">e-mail: user@mail.com</li>
+            <li class="footer_contacts--list--el">F: vgdfvdfvdfvdf</li>
+            <li class="footer_contacts--list--el">tw: fvfvfvfdvfv</li>
+            <li class="footer_contacts--list--el">inst: fvfvdfbdfbdfb</li>
+          </ul>
+        </div>
+        <div class="footer_registration">
+          <input
+            class="footer_registration--input"
+            placeholder="Введіть свою e-mail адресу"
+          />
+
+          <button class="footer_registration--button">Підписатися</button>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
