@@ -138,6 +138,13 @@
             </div>
           </div>
         </section>
+        <section class="main_sixth--section">
+          <div id="dino_score">Рахунок: 0</div>
+          <div id="dino_game">
+            <div id="dino"></div>
+            <div id="dino_start--text">Клікни по полю, щоб розпочати</div>
+          </div>
+        </section>
         <section class="main_eight--section">
           <h2 class="main_fifth--section--header">8- Введіть три числа</h2>
           <div class="main_eight--section--content">
@@ -153,120 +160,39 @@
             <div class="arrow" id="prev">⬅</div>
             <div class="slides" id="slides">
               <div class="slide">
-                <img
-                  src="images/photo1.jpg"
-                  alt="Фото"
-                />
+                <img src="images/photo1.jpg" alt="Фото" />
               </div>
 
               <div class="slide">
-                <img
-                  src="./images/photo2.jpg"
-                  alt="Фото"
-                />
+                <img src="./images/photo2.jpg" alt="Фото" />
               </div>
               <div class="slide">
-                <img
-                  src="./images/photo3.jpg"
-                  alt="Фото"
-                />
+                <img src="./images/photo3.jpg" alt="Фото" />
               </div>
             </div>
             <div class="arrow" id="next">➡</div>
           </div>
         </section>
         <section class="main_seventh--section">
-                <h2 class="main_fifth--section--header">7- Футбол</h2>
-                <div id="main_seventh--field">
-                  <div id="ball"></div>
-                  <div id="goal"></div>
-                </div>
-                <p id="score">Score: 0</p>
+          <h2 class="main_fifth--section--header">7- Футбол</h2>
+          <div id="main_seventh--field">
+            <div id="ball"></div>
+            <div id="goal"></div>
+          </div>
+          <p id="score">Score: 0</p>
         </section>
         <section class="main_tenth--section">
           <h2 class="main_tenth--section--header">10- Обери вченого/их</h2>
           <div class="main_tenth--section--bottom">
             <div class="main_tenth--section--bottom--left">
-              <ul class="main_tenth--section--bottom--left--list">
-                <li
-                  class="main_tenth--section--bottom--left--list--el"
-                  id="tenth--el"
-                >
-                  Вчений
-                </li>
-                <li
-                  class="main_tenth--section--bottom--left--list--el"
-                  id="tenth--el"
-                >
-                  Вчений
-                </li>
-                <li
-                  class="main_tenth--section--bottom--left--list--el"
-                  id="tenth--el"
-                >
-                  Вчений
-                </li>
-                <li
-                  class="main_tenth--section--bottom--left--list--el"
-                  id="tenth--el"
-                >
-                  Вчений
-                </li>
-                <li
-                  class="main_tenth--section--bottom--left--list--el"
-                  id="tenth--el"
-                >
-                  Вчений
-                </li>
-                <li
-                  class="main_tenth--section--bottom--left--list--el"
-                  id="tenth--el"
-                >
-                  Вчений
-                </li>
-                <li
-                  class="main_tenth--section--bottom--left--list--el"
-                  id="tenth--el"
-                >
-                  Вчений
-                </li>
-                <li
-                  class="main_tenth--section--bottom--left--list--el"
-                  id="tenth--el"
-                >
-                  Вчений
-                </li>
-                <li
-                  class="main_tenth--section--bottom--left--list--el"
-                  id="tenth--el"
-                >
-                  Вчений
-                </li>
-                <li
-                  class="main_tenth--section--bottom--left--list--el"
-                  id="tenth--el"
-                >
-                  Вчений
-                </li>
-                <li
-                  class="main_tenth--section--bottom--left--list--el"
-                  id="tenth--el"
-                >
-                  Вчений
-                </li>
-                <li
-                  class="main_tenth--section--bottom--left--list--el"
-                  id="tenth--el"
-                >
-                  Вчений
-                </li>
-              </ul>
+              <ul class="main_tenth--section--bottom--left--list"></ul>
             </div>
             <div class="main_tenth--section--bottom--right">
               <ul class="main_tenth--section--bottom--right--list">
                 <li class="main_tenth--section--botttom--right--list--el">
                   <button
                     class="main_tenth--section--bottom--right--list--el--button"
+                    data-action="born19"
                   >
                     Які вчені народилися в 19 ст
                   </button>
@@ -274,6 +200,7 @@
                 <li class="main_tenth--section--botttom--right--list--el">
                   <button
                     class="main_tenth--section--bottom--right--list--el--button"
+                    data-action="sortName"
                   >
                     Відсортувати вчених по алфавіту
                   </button>
@@ -282,6 +209,7 @@
                 <li class="main_tenth--section--botttom--right--list--el">
                   <button
                     class="main_tenth--section--bottom--right--list--el--button"
+                    data-action="sortYears"
                   >
                     Відсортувати вчених по кількості прожитих років
                   </button>
@@ -289,6 +217,7 @@
                 <li class="main_tenth--section--botttom--right--list--el">
                   <button
                     class="main_tenth--section--bottom--right--list--el--button"
+                    data-action="latestBorn"
                   >
                     Знайти вченого який народився найпізніше
                   </button>
@@ -296,6 +225,7 @@
                 <li class="main_tenth--section--botttom--right--list--el">
                   <button
                     class="main_tenth--section--bottom--right--list--el--button"
+                    data-action="einsteinYear"
                   >
                     Знайти рік народження Albert Einstein
                   </button>
@@ -303,6 +233,7 @@
                 <li class="main_tenth--section--botttom--right--list--el">
                   <button
                     class="main_tenth--section--bottom--right--list--el--button"
+                    data-action="lastnameC"
                   >
                     Знайти вчених чиє прізвище починажється на C
                   </button>
@@ -310,6 +241,7 @@
                 <li class="main_tenth--section--botttom--right--list--el">
                   <button
                     class="main_tenth--section--bottom--right--list--el--button"
+                    data-action="removeNameA"
                   >
                     Видалити вчених ім'я яких починається на A
                   </button>
@@ -317,6 +249,7 @@
                 <li class="main_tenth--section--botttom--right--list--el">
                   <button
                     class="main_tenth--section--bottom--right--list--el--button"
+                    data-action="maxMinLife"
                   >
                     Знайти вчених які прожили найбільше і найменше
                   </button>
@@ -324,6 +257,7 @@
                 <li class="main_tenth--section--botttom--right--list--el">
                   <button
                     class="main_tenth--section--bottom--right--list--el--button"
+                    data-action="sameLetters"
                   >
                     Знайди вчених чйї літери ім'я і прізвища співпадають
                   </button>

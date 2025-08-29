@@ -205,6 +205,43 @@
       padding: 10px;
     }
   }
+
+&_sixth--section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  #dino_score {
+    margin-bottom: 10px;
+  }
+
+  .cactus {
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    height: 40px;
+    background: black;
+  }
+
+  #dino_start--text {
+    font-size: 18px;
+    color: #555555;
+    pointer-events: none;
+  }
+
+  #dino_game {
+    position: relative;
+    width: 600px;
+    height: 200px;
+    border: 2px solid black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
   &_seventh--section{
     #main_seventh--field{
       width: 600px;
